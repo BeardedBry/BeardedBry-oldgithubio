@@ -23,19 +23,22 @@
 </head>
 
 <body class="bg-gray-200 font-mono">
-	<div id="wrapper" class="max-w-5xl mx-auto bg-white shadow-sm p-6">
-		<nav class="flex gap-4 mb-3">
-			<a href="mailto:brianburkard@gmail.com">
-				<Icon.EnvelopeClosed size="26" fill={secondary} class="hover:shadow-md" />
-			</a>
-			<a href="https://github.com/BeardedBry">
-				<Icon.GitHubLogo size="26" fill={secondary} class="hover:shadow-md" />
-			</a>
-			<a href="https://twitter.com/BeardedGuyBry">
-				<Icon.TwitterLogo size="26" fill={secondary} class="hover:shadow-md" />
-			</a>
+	<div id="wrapper" class="max-w-5xl mx-auto bg-white shadow-sm p-6 pt-0">
+		<nav class="py-3 sticky top-0 bg-white flex justify-between">
+			<div class="flex gap-4">
+				<a href="mailto:brianburkard@gmail.com">
+					<Icon.EnvelopeClosed size="26" fill={primary} class="hover:shadow-md" />
+				</a>
+				<a href="https://github.com/BeardedBry">
+					<Icon.GitHubLogo size="26" fill={primary} class="hover:shadow-md" />
+				</a>
+				<a href="https://twitter.com/BeardedGuyBry">
+					<Icon.TwitterLogo size="26" fill={primary} class="hover:shadow-md" />
+				</a>
+			</div>
+			<!-- Brian Burkard | Web Developer -->
 		</nav>
-		<div class="w-screen h-48 bg-gradient-to-b from-secondary via-secondary to-primary relative left-[calc(-50vw+50%)]">
+		<div class="w-screen h-48 bg-primary relative left-[calc(-50vw+50%)] shadow-lg">
 			<div class="max-w-5xl mx-auto p-6 pt-8 text-white grid grid-cols-3 gap-12 font-mono">
 				<div class="col-span-3 md:col-span-1">
 					<!-- <p class="text-5xl font-logo">BRIAN</p>
@@ -68,13 +71,14 @@
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
 	}
+
 	html {
 		font-family: system-ui, sans-serif;
 		background-color: #F6F6F6;
 	}
+
 	code {
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
 </style>
-
