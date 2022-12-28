@@ -1,25 +1,29 @@
 ---
 	import Layout from '../layouts/Layout.astro';
-	import Card from '../components/Card.astro';
 	import Section from '../components/Section.astro';
+	import Experience from '../components/Experience.astro';
 ---
 
 <Layout title="Hi, I’m a web developer focused on building great user experiences.">
-	<main class="mt-6">
+	<main class="mt-12">
 		<div class="max-w-5xl mx-auto grid grid-cols-3 gap-12 mt-9">
-			<div class="col-span-1">
+			<div class="col-span-3 md:col-span-1 order-2 md:order-1">
 				<Section title="Technologies">
-					<p class="text-xl">HTML, CSS, JavaScript, Git, React, Next js, SASS, Tailwind, Image Manipulation, WordPress, Mac
+					<p class="text-lg">HTML, CSS, JavaScript, Git, React, Next js, SASS, Tailwind, Image Manipulation,
+						WordPress, Mac
 						OS, Linux, Bash</p>
 				</Section>
 				<Section title="Education">
-					<p class="text-xl">Associate of Applied Science focused in <strong>Visual Communications</strong> from Sinclair
+					<p class="text-lg">Associate of Applied Science focused in <strong>Visual Communications</strong>
+						from Sinclair
 						Community College</p>
 				</Section>
 			</div>
-			<div class="col-span-2">
-				<Section title="Profile">
-					<p>I have a strong foundation in web development technologies such as HTML, CSS, and JavaScript, and
+			<div class="col-span-3 md:col-span-2 order-1 md:order-2">
+				<Section title="About">
+					<p class="">I have a strong foundation in web development technologies such as
+						HTML, CSS, and
+						JavaScript, and
 						I
 						enjoy using those skills to create visually appealing and user-friendly websites.
 						In my previous projects, I have combined my technical expertise with my eye for design to create
@@ -28,67 +32,22 @@
 						brand
 						or message.</p>
 				</Section>
+				<Section title="Experience">
+					<Experience title="Web Development Engineer - Powerley" period="REMOTE | August 2021 - PRESENT"
+						items={[ "Fixing issues, and adding features to an existing Next.js website using TypeScript."
+						, "Architecting new responsive applications based on figma mockups and maintaining their code bases."
+						, "Writing unit tests, maintaining versioning and workflows." , ]} />
+					<Experience title="Web Developer - Reynolds and Reynolds"
+						period="Dayton, OH | May 2019 - August 2021"
+						items={[ "Converting designs into static site models and then into interactive components on Drupal sites."
+						, "Contributing to an internal App built using React Native by adding components, custom hooks, and researching libraries such as React Query and implementing them."
+						, "Building WordPress themes from scratch and adding additional functionality through ACF and custom widgets."
+						, "Building React components to match designs and requirements." ]} />
+					<Experience title="Web Intern - CatechismClass.com" period="Remote | August 2017 - Jan 2018"
+						items={[ "Creating video content for the website." , "Assisting in embedding videos."
+						, "PHP scripting." ]} />
+				</Section>
 			</div>
 		</div>
-		<!-- <h1>Welcome to Astro</h1>
-		<p class="instructions">
-			To get started, open the directory <code>src/pages</code> in your project.<br />
-			<strong>Code Challenge:</strong> Tweak the "Welcome to Astro" message above.
-		</p>
-		<ul role="list" class="link-card-grid">
-			<Card href="https://docs.astro.build/" title="Documentation"
-				body="Learn how Astro works and explore the official API docs." />
-			<Card href="https://astro.build/integrations/" title="Integrations"
-				body="Supercharge your project with new frameworks and libraries." />
-			<Card href="https://astro.build/themes/" title="Themes"
-				body="Explore a galaxy of community-built starter themes." />
-			<Card href="https://astro.build/chat/" title="Community"
-				body="Come say hi to our amazing Discord community. ❤️" />
-		</ul> -->
 	</main>
 </Layout>
-
-<!-- <style>
-	main {
-		margin: auto;
-		padding: 1.5rem;
-		max-width: 60ch;
-	}
-	h1 {
-		font-size: 3rem;
-		font-weight: 800;
-		margin: 0;
-	}
-	.text-gradient {
-		background-image: var(--accent-gradient);
-		-webkit-background-clip: text;
-		-webkit-text-fill-color: transparent;
-		background-size: 400%;
-		background-position: 0%;
-	}
-	.instructions {
-		line-height: 1.6;
-		margin: 1rem 0;
-		border: 1px solid rgba(var(--accent), 25%);
-		background-color: white;
-		padding: 1rem;
-		border-radius: 0.4rem;
-	}
-	.instructions code {
-		font-size: 0.875em;
-		font-weight: bold;
-		background: rgba(var(--accent), 12%);
-		color: rgb(var(--accent));
-		border-radius: 4px;
-		padding: 0.3em 0.45em;
-	}
-	.instructions strong {
-		color: rgb(var(--accent));
-	}
-	.link-card-grid {
-		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(24ch, 1fr));
-		gap: 1rem;
-		padding: 0;
-	}
-</style> -->

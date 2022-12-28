@@ -1,9 +1,12 @@
 ---
-	import "../components/GlobalStyles.astro";
+	import * as Icon from '@astropub/icons'
 
 	export interface Props {
 		title: string;
 	}
+
+	const primary = '#6F00FD';
+	const secondary = '#0066FF';
 
 	const { title } = Astro.props;
 ---
@@ -21,28 +24,46 @@
 
 <body class="bg-gray-200 font-mono">
 	<div id="wrapper" class="max-w-5xl mx-auto bg-white shadow-sm p-6">
-		<nav>email git twitter</nav>
-		<div class="w-screen h-48 bg-primary relative left-[calc(-50vw+50%)]">
-			<div class="max-w-5xl mx-auto p-6 pt-8 text-white grid grid-cols-3 gap-12">
-				<div class="col-span-1 ">
+		<nav class="flex gap-4 mb-3">
+			<a href="mailto:brianburkard@gmail.com">
+				<Icon.EnvelopeClosed size="26" fill={secondary} class="hover:shadow-md" />
+			</a>
+			<a href="https://github.com/BeardedBry">
+				<Icon.GitHubLogo size="26" fill={secondary} class="hover:shadow-md" />
+			</a>
+			<a href="https://twitter.com/BeardedGuyBry">
+				<Icon.TwitterLogo size="26" fill={secondary} class="hover:shadow-md" />
+			</a>
+		</nav>
+		<div class="w-screen h-48 bg-gradient-to-b from-secondary via-secondary to-primary relative left-[calc(-50vw+50%)]">
+			<div class="max-w-5xl mx-auto p-6 pt-8 text-white grid grid-cols-3 gap-12 font-mono">
+				<div class="col-span-3 md:col-span-1">
 					<!-- <p class="text-5xl font-logo">BRIAN</p>
 					<p class="text-5xl font-logo">BURKARD</p> -->
 					<img src="./BrianBurkard.svg" alt="Brian Burkard" />
 					<p class="text-2xl tracking-wide pt-1">Web Developer</p>
 				</div>
-				<div class="col-span-2 self-center">
-				<p class="text-3xl leading-10 tracking-wide">
-					Hi, I’m a web developer focused on building great user experiences.
-				</p>
+				<div class="col-span-2 -translate-y-2 hidden md:block">
+					<p class="text-3xl leading-10 tracking-wide">
+						Hi, I’m a web developer focused on building great user experiences.
+					</p>
 				</div>
 			</div>
 		</div>
 		<slot />
 	</div>
+	<footer class="text-center py-9">
+		© Copyright <span id="year"></span>
+	</footer>
 </body>
 
 </html>
-<!-- <style is:global>
+
+<script>
+	document.querySelector("#year").append(new Date().getFullYear());
+</script>
+
+<style is:global>
 	:root {
 		--accent: 124, 58, 237;
 		--accent-gradient: linear-gradient(45deg, rgb(var(--accent)), #da62c4 30%, white 60%);
@@ -55,4 +76,5 @@
 		font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
 			Bitstream Vera Sans Mono, Courier New, monospace;
 	}
-</style> -->
+</style>
+
