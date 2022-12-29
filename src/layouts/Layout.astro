@@ -47,8 +47,8 @@
 					<p class="text-2xl tracking-wide pt-1">Web Developer</p>
 				</div>
 				<div class="col-span-2 -translate-y-2 hidden md:block">
-					<p class="text-3xl leading-10 tracking-wide">
-						Hi, I’m a web developer focused on building great user experiences.
+					<div class="sr-only">Hi, I’m a web developer focused on building great user experiences.</div>
+					<p class="text-3xl leading-10 tracking-wide typed-element">
 					</p>
 				</div>
 			</div>
@@ -63,8 +63,20 @@
 </html>
 
 <script>
+	import Typed from 'typed.js';
 	document.querySelector("#year").append(new Date().getFullYear());
+
+
+	var options = {
+		strings: ['', 'Hi, I’m a web developer focused on building great user experiences.'],
+		typeSpeed: 30,
+		// backDelay: 900,
+	};
+
+	var typed = new Typed('.typed-element', options);
+
 </script>
+
 
 <style is:global>
 	:root {
