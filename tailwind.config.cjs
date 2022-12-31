@@ -11,8 +11,9 @@ module.exports = {
 				secondary: '#0066FF'
 			},
 			fontFamily: {
-				mono: ['Space Mono', 'MONOSPACE'],
+				mono: ['Space Mono', 'monospace'],
 				logo: ['Staatliches', 'SANS-SERIF'],
+				text: ['PT Sans', 'sans-serif']
 			}
 		},
 	},

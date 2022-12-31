@@ -1,5 +1,6 @@
 ---
 	import * as Icon from '@astropub/icons'
+	import { GoogleFontsOptimizer } from "astro-google-fonts-optimizer";
 
 	export interface Props {
 		title: string;
@@ -18,12 +19,14 @@
 	<meta charset="UTF-8" />
 	<meta name="viewport" content="width=device-width" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+	<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+	</GoogleFontsOptimizer>
 	<meta name="generator" content={Astro.generator} />
 	<title>Brian Burkard - {title}</title>
 </head>
 
-<body class="bg-gray-200 font-mono">
-	<div id="wrapper" class="max-w-5xl mx-auto bg-white shadow-sm p-6 pt-0">
+<body class="bg-gray-200 font-text">
+	<div id="wrapper" class="max-w-5xl mx-auto bg-white shadow-lg p-6 pt-0">
 		<nav class="py-3 sticky top-0 bg-white flex justify-between">
 			<div class="flex gap-4">
 				<a href="mailto:brianburkard@gmail.com">
