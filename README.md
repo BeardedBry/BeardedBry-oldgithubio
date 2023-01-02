@@ -1,6 +1,6 @@
 ### Front-End Web Developer
 
-Resume / Portfolio site build using Astro.
+Resume / Portfolio site built using Astro.
 
 <!--
 **BeardedBry/BeardedBry** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
