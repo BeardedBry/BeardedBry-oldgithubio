@@ -17,9 +17,13 @@
 
 <head>
 	<meta charset="UTF-8" />
+	<meta name="description" content="Brian Burkard's web development resume and portfolio.">
+	<meta name="keywords"
+		content="HTML, CSS, JavaScript, Web Development, Brian Burkard, React, Next, TypeScript, front end, web developer, for hire, senior web developer, engineer">
 	<meta name="viewport" content="width=device-width" />
 	<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-	<GoogleFontsOptimizer url="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
+	<GoogleFontsOptimizer
+		url="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap">
 	</GoogleFontsOptimizer>
 	<meta name="generator" content={Astro.generator} />
 	<title>Brian Burkard - {title}</title>
@@ -46,7 +50,7 @@
 				<div class="col-span-3 md:col-span-1">
 					<!-- <p class="text-5xl font-logo">BRIAN</p>
 					<p class="text-5xl font-logo">BURKARD</p> -->
-					<img src="./BrianBurkard.svg" alt="Brian Burkard" />
+					<img src="./BrianBurkard.svg" alt="Brian Burkard" width="204" height="104" />
 					<p class="text-2xl tracking-wide pt-1">Web Developer</p>
 				</div>
 				<div class="col-span-2 -translate-y-2 hidden md:block">
@@ -56,6 +60,9 @@
 				</div>
 			</div>
 		</div>
+		<!-- <div class="md:hidden">
+			<p class="mt-4 text-3xl leading-10 tracking-wide typed-element-mobile"></p>
+		</div> -->
 		<slot />
 	</div>
 	<footer class="text-center py-9">
@@ -77,6 +84,7 @@
 	};
 
 	var typed = new Typed('.typed-element', options);
+	// var mobileTyped = new Typed('.typed-element-mobile', options);
 
 </script>
 
